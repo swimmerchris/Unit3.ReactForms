@@ -11,10 +11,10 @@ function SignUpForm ({setToken}) {
         event.preventDefault();
         
         if (username.length < 8) {
-            setUsernameError("ERROR: Your Username needs to be longer than 8 characters")
+            setUsernameError("INPUT ERROR: Your Username needs to be longer than 8 characters")
         } else if (password.length <8) {
             setUsernameError(null);
-            setPasswordError("ERROR: Your Password needs to be longer than 8 characters")
+            setPasswordError("INPUT ERROR: Your Password needs to be longer than 8 characters")
         } else {
             try {
                 const response = await fetch('https://fsa-jwt-practice.herokuapp.com/signup', {
