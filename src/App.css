@@ -7,8 +7,14 @@
 
 #error{
   color: rgb(218, 111, 24);
-
   font-weight: 6000;
+}
+
+.authenticate, .signup {
+  border: solid rgb(249, 249, 249);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px;
 }
 
 .signup form{
@@ -23,4 +29,9 @@
   width: 50%;
   align-self: center;
   padding: 10px;
+}
+
+#userMessage, #successMessage {
+  color: green;
+  font-weight: 600;
 }

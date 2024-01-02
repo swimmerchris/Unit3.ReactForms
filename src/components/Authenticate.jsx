@@ -26,12 +26,12 @@ function Authenticate ({token, setToken}) {
     }
     
     return(
-        <div>
+        <div className="authenticate">
             <h2>Authenticate</h2>
-            {success && <p>{success}</p> }
-            {error && <p>{error}</p> }
+            {success && <p id="successMessage">{success}</p> }
+            {error && <p id="error">{error}</p> }
             <button onClick={handleClick}>Authenticate Token</button>    
-            {username && <h3>Your Username is {username}</h3> }
+            {username && <h3 id="userMessage">Your Username is {username}</h3> }
         </div>
 )
 };
