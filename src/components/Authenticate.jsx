@@ -20,6 +20,7 @@ function Authenticate ({token, setToken}) {
             setSuccess(result.message);
             setUsername(result.data.username);
             console.log(result);
+            setError(null)
         } catch (err) {
             setError(err.message);
         }
@@ -28,8 +29,8 @@ function Authenticate ({token, setToken}) {
     return(
         <div className="authenticate">
             <h2>Authenticate</h2>
-            {success && <p id="successMessage">{success}</p> }
-            {error && <p id="error">{error}</p> }
+            {success && !error &&<p id="successMessage">{success}</p> }
+            {error && <p id="error">Unable to find Username, Please try again!</p> }
             <button onClick={handleClick}>Authenticate Token</button>    
             {username && <h3 id="userMessage">Your Username is {username}</h3> }
         </div>
